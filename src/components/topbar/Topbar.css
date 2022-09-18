@@ -1,0 +1,12 @@
+.topbar {
+    height: 80px;
+    background-color: navy;
+}
+
+.appName {
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 55px;
+    font-weight: 900;
+    padding: 8px;
+}
