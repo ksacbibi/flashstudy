@@ -10,18 +10,27 @@
             <div class="title">FlashStudy</div>
         </div>
         <div class="content-wrap">
-            <div class="card-inputs">
-                <label for="word-input">Word:</label>
-            </div>
-            <div class="card-inputs">
-                <input type="text" id="word-input">
-            </div>
-            <div class="card-inputs">
-                <label for="definition-input">Definition:</label>
-            </div>
-            <div class="card-inputs">
-                <input type="text" id="definition-input">
+            <form id="cardInput">
+                <div class="card-inputs">
+                    <label for="word-input">Word:</label>
+                </div>
+                <div class="card-inputs">
+                    <input type="text" id="word-input">
+                </div>
+                <div class="card-inputs">
+                    <label for="definition-input">Definition:</label>
+                </div>
+                <div class="card-inputs">
+                    <input type="text" id="definition-input">
+                </div>
+                <div class="add-card-btn card-inputs">
+                    <button type="button" id="add-card-btn">Add Card</button>
+                </div>
+            </form>
+
+            <div id="cards-container">
             </div>
         </div>
+        <script src="./index.js"></script>
     </body>
 </html>

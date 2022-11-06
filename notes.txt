@@ -1,0 +1,4 @@
+TODO
+- display word on front of card once it gets added
+then when user clicks it will flip to back with definition
+(i guess for now this can be a simple show/hide)

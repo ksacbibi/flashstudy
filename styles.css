@@ -14,6 +14,7 @@ body {
     color: white;
     font-size: 60px;
     margin: auto auto auto 10px;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 .content-wrap {
@@ -28,6 +29,7 @@ body {
 
 .card-inputs label {
     font-size: 25px;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 .card-inputs input {
@@ -35,4 +37,62 @@ body {
     height: 40px;
     background-color: rgb(240, 240, 240);
     border: none;
+}
+
+.card-inputs button {
+    font-family: 'Trebuchet MS', sans-serif;
+    border: none;
+    font-size: 16px;
+    padding: 15px;
+    background-color: rgb(75, 105, 193);
+    color: white;
+    margin: 15px auto;
+}
+
+.card-inputs button:hover {
+    cursor: pointer;
+    background-color: rgb(91, 116, 192);
+}
+
+.add-card-btn {
+    text-align: center;
+}
+
+#cards-container {
+    max-width: 100%;
+    /* display: flex; */
+    justify-content: space-between;
+    /* overflow: auto; */
+}
+
+.card {
+    border: 10px solid gray;
+    /* display: inline-block; */
+    width: 30em;
+    margin: 10px;
+    height: 18em;
+    border-radius: 10px;
+    margin: 10px auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: rgba(211, 211, 211, 0.596);
+}
+
+.card-word {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 36pt;
+}
+
+.card-definition {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 14pt;
+}
+
+.hidden {
+    display: none;
 }
