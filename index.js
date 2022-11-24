@@ -1,5 +1,5 @@
 const cardsContainer = document.getElementById("cards-container")
-// let cardCounter = localStorage.getItem('cardCounter') == 0 ? 0 : localStorage.getItem('cardCounter');
+let cardCounter = localStorage.getItem('cardCounter') == 0 ? 0 : localStorage.getItem('cardCounter');
 
 var savedCards = localStorage.getItem('cardItems');
 if (savedCards) {
@@ -42,13 +42,13 @@ document.getElementById("add-card-btn").onclick = function() {
     console.log(cardCounter);
 }
 
-// function handleCardClick(card) {
-//     console.log(definition);
-//     if (definition.classList.contains("hidden")) {
-//         definition.classList.remove("hidden");
-//         word.classList.add("hidden");
-//     } else {
-//         word.classList.remove("hidden");
-//         definition.classList.add("hidden");
-//     }
-// }
+function handleCardClick(card) {
+    console.log(definition);
+    if (definition.classList.contains("hidden")) {
+        definition.classList.remove("hidden");
+        word.classList.add("hidden");
+    } else {
+        word.classList.remove("hidden");
+        definition.classList.add("hidden");
+    }
+}
