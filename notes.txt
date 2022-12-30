@@ -1,6 +1,6 @@
 TODO
-- display word on front of card once it gets added
-then when user clicks it will flip to back with definition
-(i guess for now this can be a simple show/hide)
--- need to store word and definition with id in localstorage, maybe eventually database
--- how should id be set? should it be the placement number in the number of cards or a hash key
+- instead of having cardItems in local storage store a whole string of html:
+    - have cardItems be an array of card components so it can be deleted by cardNum
+    - then compile array items of cardItems into a string to be set in local storage
+
+- change colour theme

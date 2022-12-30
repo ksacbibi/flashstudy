@@ -73,9 +73,9 @@ body {
     height: 18em;
     border-radius: 10px;
     margin: 10px auto 10px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
 }
 
 .card:hover {
@@ -83,16 +83,32 @@ body {
     background-color: rgba(211, 211, 211, 0.596);
 }
 
+.card-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
 .card-word {
     font-family: 'Trebuchet MS', sans-serif;
     font-size: 36pt;
+    text-align: center;
 }
 
 .card-definition {
     font-family: 'Trebuchet MS', sans-serif;
-    font-size: 14pt;
+    font-size: 20pt;
+    text-align: center;
 }
 
 .hidden {
     display: none;
+}
+
+.delete-btn {
+    font-family: 'Trebuchet MS', sans-serif;
+    /* position: absolute; */
+    right: 10px;
+    /* top: 0; */
 }
