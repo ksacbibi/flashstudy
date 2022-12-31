@@ -4,3 +4,4 @@ TODO
     - then compile array items of cardItems into a string to be set in local storage
 
 - change colour theme
+- fix styling

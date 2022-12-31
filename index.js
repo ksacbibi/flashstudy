@@ -1,6 +1,7 @@
 // get values from local storage
 const cardsContainer = document.getElementById("cards-container")
-let cardCounter = localStorage.getItem('cardCount') == 0 ? 0 : localStorage.getItem('cardCount');
+let cardIDNum = localStorage.getItem('cardIDNum') == 0 ? 0 : localStorage.getItem('cardIDNum');
+// new ID nums can't be less than the previous ID nums -- need to find a better way for these
 
 var savedCards = JSON.parse(localStorage.getItem('cardItems')) ? JSON.parse(localStorage.getItem('cardItems')) : []; //this should return array of html elements
 console.log(savedCards);
@@ -21,12 +22,12 @@ const definitionInput = document.getElementById("definition-input");
 document.getElementById("add-card-btn").onclick = function() {
     if (wordInput.value && definitionInput.value) {
         // card count used for id
-        cardCounter++;
+        cardIDNum++;
 
         // whole card container
         const card = document.createElement("div");
-        card.setAttribute("onclick", "handleCardClick(" + cardCounter + ")")
-        card.id = "cardNumber" + cardCounter.toString();
+        card.setAttribute("onclick", "handleCardClick(" + cardIDNum + ")")
+        card.id = "cardNumber" + cardIDNum.toString();
         card.className = "card";
 
         // word content
@@ -43,7 +44,7 @@ document.getElementById("add-card-btn").onclick = function() {
         // add delete button to card
         const deleteBtn = document.createElement("button");
         deleteBtn.classList.add("delete-btn");
-        deleteBtn.setAttribute("onclick", "handleDeleteClick(" + cardCounter +")");
+        deleteBtn.setAttribute("onclick", "handleDeleteClick(" + cardIDNum +")");
         deleteBtn.innerHTML = "Delete";
         card.append(deleteBtn);
 
@@ -63,7 +64,7 @@ document.getElementById("add-card-btn").onclick = function() {
         console.log(JSON.stringify(card));
         savedCards.push(card.outerHTML);
         localStorage.setItem('cardItems', JSON.stringify(savedCards));
-        localStorage.setItem('cardCount', cardCounter);
+        localStorage.setItem('cardIDNum', cardIDNum);
     }
 }
 
@@ -71,8 +72,9 @@ function handleCardClick(cardNum) {
     const cardId = "cardNumber" + cardNum.toString();
     const cardComponent = document.getElementById(cardId);
 
-    const word = cardComponent.children[0].children[0];
-    const definition = cardComponent.children[0].children[1];
+    console.log(cardComponent);
+    const word = cardComponent.children[1].children[0];
+    const definition = cardComponent.children[1].children[1];
 
     if (definition.classList.contains("hidden")) {
         definition.classList.remove("hidden");
@@ -87,9 +89,9 @@ function handleDeleteClick(cardNum) {
     const cardId = "cardNumber" + cardNum.toString();
     const cardComponent = document.getElementById(cardId);
     cardComponent.outerHTML = "";
-    cardCounter--;
 
-    // const updatedCardItems = JSON.parse(localStorage.getItem('cardItems')).splice(cardNum);
-    // localStorage.setItem('cardItems', updatedCardItems);
-    // localStorage.setItem('cardCount', cardCounter);
+    const updatedCardItems = JSON.parse(localStorage.getItem('cardItems')).splice(cardNum);
+    console.log(JSON.stringify(updatedCardItems));
+    localStorage.setItem('cardItems', JSON.stringify(updatedCardItems));
+
 }
