@@ -5,8 +5,9 @@ body {
 .topbar {
     height: 80px;
     width: 100%;
-    background-color: navy;
+    background-color: #9d746f;
     margin: 0;
+    display: inline-flex;
 }
 
 .title {
@@ -15,6 +16,7 @@ body {
     font-size: 60px;
     margin: auto auto auto 10px;
     font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
 }
 
 .content-wrap {
@@ -44,14 +46,14 @@ body {
     border: none;
     font-size: 16px;
     padding: 15px;
-    background-color: rgb(75, 105, 193);
+    background-color: #caaa93;
     color: white;
     margin: 15px auto;
 }
 
 .card-inputs button:hover {
     cursor: pointer;
-    background-color: rgb(91, 116, 192);
+    background-color: #cfb2a0;
 }
 
 .add-card-btn {

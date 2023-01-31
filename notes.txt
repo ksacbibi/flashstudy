@@ -1,7 +1,3 @@
 TODO
-- instead of having cardItems in local storage store a whole string of html:
-    - have cardItems be an array of card components so it can be deleted by cardNum
-    - then compile array items of cardItems into a string to be set in local storage
-
 - change colour theme
 - fix styling
